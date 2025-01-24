@@ -24,6 +24,8 @@ The primary components of this project are:
 
 ├── 02_cluster_recordings.py
 
+├── 03_plot_cluster_results.py
+
 ├── SYNTHETIC_DATA 
 
 │ └── ... contains generated synthetic sequences 
@@ -34,7 +36,11 @@ The primary components of this project are:
 
 ├── CLUSTERED_DATA 
 
-└── ... contains clustering results
+│ └── ... contains clustering results
+
+├── CLUSTER_PLOTS
+
+│ └── ... contains clustering results
 
 
 ## Script Descriptions
@@ -50,6 +56,11 @@ The primary components of this project are:
 ### 3. **02_cluster_recordings.py**
    - **Purpose**: Clusters the dissected motifs based on their sequence similarity and positional proximity. Distance is calculated using a weighted combination of letter differences and positional offsets.
    - **Output**: Clustering results saved as a human-readable text file and a JSON file in the `CLUSTERED_DATA` folder. The text file includes detailed cluster information sorted by the number of entries.
+
+### 4. **03_plot_cluster_results.py**
+   - **Purpose**: Plots the different clusters generated in step 3.
+   - **Output**: Cluster plots saved as png and eps in folder 'CLUSTER_PLOTS'.
+
 
 ## Prerequisites
 
@@ -71,6 +82,9 @@ Ensure you have the following dependencies installed:
 3. **Cluster Recordings**:
    Execute `02_cluster_recordings.py` to cluster motifs based on sequence similarity and positional proximity.
 
+4. **Plot the different Clusters**:
+   Execute `03_cluster_recordings.py` to cluster motifs based on sequence similarity and positional proximity.
+
 ## Results
 
 All results, including synthetic sequences, dissected motifs, and clustering outputs, are saved in appropriately named folders for easy access and further analysis.
@@ -78,6 +92,8 @@ All results, including synthetic sequences, dissected motifs, and clustering out
 - `SYNTHETIC_DATA`: Contains the generated synthetic sequences.
 - `ANALYZED_DATA`: Contains JSON files with dissected motif recordings.
 - `CLUSTERED_DATA`: Contains clustering results, including human-readable text and JSON files.
+- `CLUSTER_PLOTS`: Contains plots of the identyfied clusters.
+
 
 ## License
 
