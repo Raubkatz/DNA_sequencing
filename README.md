@@ -40,7 +40,7 @@ The primary components of this project are:
 
 ├── CLUSTER_PLOTS
 
-│ └── ... contains clustering results
+│ └── ... contains clustering plots
 
 
 ## Script Descriptions
