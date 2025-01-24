@@ -1,3 +1,51 @@
+"""
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████
+░░░░ ░░░░░░░▀█▄█▄███▀░░░ ▀█▄█▄███
+
+This script performs clustering, analysis, and visualization of DNA sequences.
+It processes sequence data, calculates pairwise distances, clusters similar sequences,
+generates a detailed report in both human-readable and JSON formats, and visualizes
+the clusters as color-coded sequence plots.
+
+### Features
+1. **Distance Calculation**:
+   - Measures similarity between sequences using a weighted combination of letter differences and positional differences.
+
+2. **Clustering**:
+   - Groups sequences into clusters based on a user-defined distance threshold.
+   - Provides detailed progress tracking for clustering operations.
+
+3. **Cluster Analysis**:
+   - Computes average distances within clusters.
+   - Saves cluster details, including the number of entries and the sequences in each cluster, as a text report and a JSON file.
+
+4. **Visualization**:
+   - Generates plots for the top clusters, with sequences color-coded by their characters.
+   - Saves plots as PNG and EPS files for publication or further analysis.
+
+### Approach
+- Each sequence is compared to others to calculate pairwise distances.
+- Sequences are grouped into clusters if their distance is below a threshold.
+- Results are saved and visualized for downstream analysis or presentation.
+
+### Parameters
+- `INPUT_FOLDER`: Path to the folder containing analyzed sequence JSON files.
+- `OUTPUT_FILE`: Path to save the clustering results.
+- `DISTANCE_THRESHOLD`: Maximum distance between sequences to consider them part of the same cluster.
+- `LETTER_WEIGHT`: Weight for letter differences in distance calculation.
+- `POSITION_WEIGHT`: Weight for positional differences in distance calculation.
+- `CLUSTER_FILE`: Path to the cluster analysis JSON file.
+- `OUTPUT_FOLDER`: Directory to save the plots.
+- `NUM_CLUSTERS`: Number of clusters to visualize.
+- `CUSTOM_COLOR_MAP`: Custom mapping of letters to hexadecimal colors for the plots.
+
+### Example Usage
+Run the script to cluster sequences stored in `ANALYZED_DATA` with a distance threshold of 21.
+Results will be saved in the `CLUSTERED_DATA` folder as `clusters.txt` and `clusters.json`.
+Plots of the top 10 clusters will be saved in the `CLUSTER_PLOTS` folder.
+"""
+
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns

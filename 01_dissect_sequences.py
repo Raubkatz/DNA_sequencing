@@ -1,3 +1,38 @@
+"""
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████
+░░░░ ░░░░░░░▀█▄█▄███▀░░░ ▀█▄█▄███
+
+This script analyzes DNA sequences to identify and extract sub-sequences defined by specific start
+and stop triads. It processes all sequence files in a specified input folder, searches for the defined
+start-stop triad patterns, and outputs the results as JSON files in a designated output folder.
+
+### Features
+1. **Start-Stop Triad Analysis**:
+   - Identifies sub-sequences that start with any of the given start triads and end with one of the stop triads.
+
+2. **Output as JSON**:
+   - Each identified sub-sequence is recorded with its start position and the extracted sequence in a JSON file.
+
+3. **Batch Processing**:
+   - Processes all `.txt` sequence files in the input folder, ensuring scalability for large datasets.
+
+### Approach
+- Iterates through sequences in steps of three (triads) to mimic codon-based reading in genetics.
+- Starts recording a sub-sequence upon encountering a start triad and stops when a stop triad is found.
+- Stores results as a structured JSON file for easy access and downstream analysis.
+
+### Parameters
+- `folder`: Path to the folder containing `.txt` sequence files.
+- `start_triads`: List of triads that mark the beginning of a sub-sequence.
+- `stop_triads`: List of triads that mark the end of a sub-sequence.
+- `output_folder`: Path to the folder where results will be saved.
+
+### Example Usage
+Run the script to analyze sequences in the `SYNTHETIC_DATA` folder, using `ATG` and `ATA` as start triads,
+and `TGA`, `TAG`, `TAA` as stop triads. The results will be saved as JSON files in the `ANALYZED_DATA` folder.
+"""
+
 import os
 import json
 

@@ -2,9 +2,36 @@
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 █░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████
 ░░░░ ░░░░░░░▀█▄█▄███▀░░░ ▀█▄█▄███
-This script generates a synthetic DNA sequence and perturbs it to produce multiple sequences saved in a directory named SYNTHETIC_DATA.
-Original sequence: file 000.txt
-Perturbed sequences: 001.txt, 002.txt, and so on.
+
+This script generates synthetic DNA sequences for testing, simulation, or educational purposes.
+It creates one original sequence and a series of perturbed versions to simulate mutations or
+experimental variations. The perturbed sequences are stored in a directory named `SYNTHETIC_DATA`.
+
+### Features
+1. **DNA Sequence Generation**:
+   - Generates a random DNA sequence of a specified length using the nucleotides A, C, T, and G.
+
+2. **Perturbation**:
+   - Introduces controlled randomness into the sequence, either by removing or replacing nucleotides
+     with a given probability.
+
+3. **Storage**:
+   - Saves the original sequence and its perturbed variants as text files in a dedicated folder.
+     The original sequence is saved as `000.txt`, and perturbed sequences follow the format `001.txt`, `002.txt`, etc.
+
+### Approach
+- The script uses Python's `random` module to generate and modify DNA sequences.
+- Perturbations are applied at the nucleotide level, either removing or substituting letters based on a probability.
+- Outputs are neatly organized in a folder for further analysis or experimentation.
+
+### Parameters
+- `SEQUENCE_LENGTH`: Length of the original DNA sequence.
+- `NUM_PERTURBATIONS`: Number of perturbed sequences to generate.
+- `PERTURBATION_PROBABILITY`: Probability for each nucleotide to be perturbed.
+
+### Example Usage
+Run the script directly to generate an original sequence of 100,000 nucleotides, perturb it 26 times
+with a 5% mutation probability, and save all sequences in the `SYNTHETIC_DATA` folder.
 """
 
 import os

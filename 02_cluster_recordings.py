@@ -1,3 +1,40 @@
+"""
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████
+░░░░ ░░░░░░░▀█▄█▄███▀░░░ ▀█▄█▄███
+
+This script performs clustering and analysis of DNA sequences based on their similarity.
+It processes sequence data, calculates pairwise distances, clusters similar sequences,
+and generates a detailed report in both human-readable and JSON formats.
+
+### Features
+1. **Distance Calculation**:
+   - Measures similarity between sequences using a weighted combination of letter differences and positional differences.
+
+2. **Clustering**:
+   - Groups sequences into clusters based on a user-defined distance threshold.
+   - Provides detailed progress tracking for clustering operations.
+
+3. **Cluster Analysis**:
+   - Computes average distances within clusters.
+   - Saves cluster details, including the number of entries and the sequences in each cluster, as a text report and a JSON file.
+
+### Approach
+- Each sequence is compared to others to calculate pairwise distances.
+- Sequences are grouped into clusters if their distance is below a threshold.
+- Results are saved for further downstream analysis or visualization.
+
+### Parameters
+- `INPUT_FOLDER`: Path to the folder containing analyzed sequence JSON files.
+- `OUTPUT_FILE`: Path to save the clustering results.
+- `DISTANCE_THRESHOLD`: Maximum distance between sequences to consider them part of the same cluster.
+- `LETTER_WEIGHT`: Weight for letter differences in distance calculation.
+- `POSITION_WEIGHT`: Weight for positional differences in distance calculation.
+
+### Example Usage
+Run the script to cluster sequences stored in `ANALYZED_DATA` with a distance threshold of 21.
+Results will be saved in the `CLUSTERED_DATA` folder as `clusters.txt` and `clusters.json`.
+"""
 import os
 import json
 from itertools import combinations
