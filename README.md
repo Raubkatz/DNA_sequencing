@@ -83,7 +83,7 @@ Ensure you have the following dependencies installed:
    Execute `02_cluster_recordings.py` to cluster motifs based on sequence similarity and positional proximity.
 
 4. **Plot the different Clusters**:
-   Execute `03_cluster_recordings.py` to cluster motifs based on sequence similarity and positional proximity.
+   Execute `03_cluster_recordings.py` to plot the largest clusters found among all recordings.
 
 ## Results
 
