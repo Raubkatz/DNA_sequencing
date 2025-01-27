@@ -2,7 +2,7 @@
 
 Repository for the computational analysis and clustering of synthetic DNA sequences generated, dissected, and clustered based on biological motifs.
 
-## Author: Sebastian Raubitzek, Philip König
+## Authors: Sebastian Raubitzek, Philip König
 
 ## Overview
 
